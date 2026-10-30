@@ -21,13 +21,13 @@
             </div>
         </nav>
     </header>
-    <main class="">
+    <main class=" md:p-10">
         <section>
             <div class="p-8">
                 <p>Tableau de bord</p>
             </div>
         </section>
-        <section>
+        <section class="grid md:grid-cols-2">
             <div class="m-3 flex gap-7 ">
                 <div class=" rounded-md p-2 flex flex-col w-[50%] h-auto border-rose-600 border-2 ">
                     <p>prouduis</p>
@@ -49,23 +49,77 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div>Ajouter un produit</div>
-            <div class=" p-4">
-                <label for="">nom</label>
-                <input class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="entre le nom de prouduit">
+        <section class="p-2 ">
+            <div class="grid md:grid-cols-2">
+               <div class="md:col-span-2">Ajouter un produit</div>
+                <div class=" p-4">
+                    <label for="">nom*</label>
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                </div>
+                <div class=" p-4">
+                    <label for="">categore*</label>
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                </div>
+                <div class=" p-4">
+                    <label for="">prix*</label>
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                </div>
+                <div class=" p-4">
+                    <label for="">Stock *</label>
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                </div>
+                <div class="p-4 md:col-span-2">
+                   <label for="">Path de img*</label>
+                   <input type="text" class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                </div>
             </div>
-            <div class=" p-4">
-                <label for="">categore</label>
-                <input class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="entre le nom de prouduit">
+            <div class="">
+                <div >
+                    <label for="">Tailles (M +5%, L +10%, XL +20%)</label>
+                    <select name="" id="" class=" border border-amber-950 rounded-md">
+                        <option value="">select le Tailles </option>
+                        <option value="">M</option>
+                        <option value="">L</option>
+                        <option value="">XL</option>
+                    </select>
+                </div>
+                <div class="flex gap-4">
+                    <div>
+                        <button class="flex justify-center items-center bg-red-700 font-bold p-1 rounded-md ">
+                            <span class="text-stone-50" >
+                               Ajouter
+                            </span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class=" border flex justify-center items-center  font-bold p-1 rounded-md ">
+                            <span class="" >
+                               annuler
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class=" p-4">
-                <label for="">prix</label>
-                <input class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="entre le nom de prouduit">
+            
+        </section>
+        <section class="">
+            <div>
+                <div class="flex gap-2 items-center justify-between">
+                    <h4>catalouge</h4>
+                    <input type="text" class="border w-80 h-10 border-amber-950 rounded-md" placeholder="Filtre..">
+                </div>
             </div>
-            <div class=" p-4">
-                <label for=""></label>
-                <input class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="entre le nom de prouduit">
+            <div id="" >
+                <div class="grid grid-cols-5">   
+                <p>image</p>
+                <p>nom</p>
+                <p>prix</p>
+                <p>catalog</p>
+                <p>stoke</p>
+                </div>
+                <div id="cataloga">
+                    
+                </div>
             </div>
         </section>
     </main>
@@ -74,6 +128,6 @@
             <p class="flex justify-center"> © centre ecommerce Auchan 2026 </p>
         </div>
     </footer>
-    <script type="module" src="/JC/main.js"></script>
+    <script type="module" src="JC/main.js"></script>
 </body>
 </html>
