@@ -21,14 +21,18 @@
             </div>
         </nav>
     </header>
-    <main>
-        <section>
-            <div class="p-8 ">
+    <main class=" flex justify-center py-20 ">
+    <section >
+        <section class="p-3">
+            <div class="pb-3 ">
                 <p class=" font-bold text-2xl">Contactez-nous</p>
                 <p>Une question ? Notre équipe vous répond sous 24h .</p>
             </div>
+            <button class="text-amber-50 bg-emerald-500 w-50 h-10 rounded-md">
+                <p> 🎲 Générer les données</p>
+            </button>
         </section>
-        <section>
+        <section class="grid md:grid-cols-2">
             <div class="p-4">
                 <label for="">prenom*</label>
                 <input class=" border w-full h-10 border-amber-950 rounded-md"type="text" placeholder="entre le 1er nom">
@@ -45,17 +49,24 @@
                 <label for="">Telephone*</label>
                 <input class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="ex:0123456789">
             </div>
+        </section>
             <div class="p-4">
                 <label for="">suge*</label>
                 <input class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="pour Qua">
             </div>
-        </section>
         <section>
             <div class="p-4">
                 <label for="">mesage*</label>
-                <input class="border w-full h-10 border-amber-950 rounded-md " type="text " placeholder="entre le mesage">
+                <textarea name="" id="" class="border w-full min-h-30 border-amber-950 rounded-md " placeholder="entre le mesage"></textarea>
+            </div>
+            <div class="p-4 ">
+                <button class="bg-red-600 w-full h-10 text-amber-50 border-amber-950 rounded-md">
+                    <p>Envoyer</p>
+                </button>
             </div>
         </section>
+
+    </section>
     </main>
     <footer class=" border-t">
         <div class=" p-5">

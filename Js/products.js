@@ -27,6 +27,4 @@ export function produits(catalog){
         </div>`
         produit.appendChild(article);
     });
-    
-
 }
