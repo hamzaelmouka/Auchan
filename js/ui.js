@@ -1,5 +1,6 @@
 export function pagene(totale,current,onpage){
     const pagination=document.getElementById("pagination");
+    if(!pagination) return;
     pagination.innerHTML="";
     for(let i=1 ;i<=totale ;i++){
         const bnt=document.createElement("button");
