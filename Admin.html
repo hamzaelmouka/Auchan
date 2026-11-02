@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
 </head>
+
 <body class="">
     <header class=" border-b sticky left-0 top-0 bg-amber-50 ">
         <nav class="flex items-center justify-between">
             <div class="flex items-center font-bold ">
-            <span class="bg-rose-600 p-4 mr-4 rounded-2xl text-amber-50 ">A</span><h1 class=" text-rose-500">AUCHAN</h1>
+                <span class="bg-rose-600 p-4 mr-4 rounded-2xl text-amber-50 ">A</span>
+                <h1 class=" text-rose-500">AUCHAN</h1>
             </div>
             <div>
                 <ul class="flex items-center">
@@ -51,30 +54,30 @@
         </section>
         <section class="p-2 ">
             <div class="grid md:grid-cols-2">
-               <div class="md:col-span-2">Ajouter un produit</div>
+                <div class="md:col-span-2">Ajouter un produit</div>
                 <div class=" p-4">
                     <label for="">nom*</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
                 </div>
                 <div class=" p-4">
                     <label for="">categore*</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
                 </div>
                 <div class=" p-4">
                     <label for="">prix*</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
                 </div>
                 <div class=" p-4">
                     <label for="">Stock *</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
                 </div>
                 <div class="p-4 md:col-span-2">
-                   <label for="">Path de img*</label>
-                   <input type="text" class="border w-full h-10 border-amber-950 rounded-md" type="text" >
+                    <label for="">Path de img*</label>
+                    <input type="text" class="border w-full h-10 border-amber-950 rounded-md" type="text">
                 </div>
             </div>
             <div class="">
-                <div >
+                <div>
                     <label for="">Tailles (M +5%, L +10%, XL +20%)</label>
                     <select name="" id="" class=" border border-amber-950 rounded-md">
                         <option value="">select le Tailles </option>
@@ -100,25 +103,27 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
         <section class="">
             <div>
                 <div class="flex gap-2 items-center justify-between">
                     <h4>catalouge</h4>
-                    <input type="text" class="border w-80 h-10 border-amber-950 rounded-md" placeholder="Filtre..">
+                    <input id="filtre" type="text" class="border w-80 h-10 border-amber-950 rounded-md" placeholder="Filtre..">
                 </div>
             </div>
-            <div id="" >
-                <div class="grid grid-cols-5">   
-                <p>image</p>
-                <p>nom</p>
-                <p>prix</p>
-                <p>catalog</p>
-                <p>stoke</p>
-                </div>
-                <div id="cataloga">
+            <div id="" class="overflow-x-auto">
+                <div class="min-w-150">
+                    <div class="grid grid-cols-5 pt-6 text-xl font-bold">
+                        <p>image</p>
+                        <p>nom</p>
+                        <p>prix</p>
+                        <p>catalog</p>
+                        <p>stoke</p>
+                    </div>
+                    <div id="cataloga" class=" ">
 
+                    </div>
                 </div>
             </div>
         </section>
@@ -128,6 +133,7 @@
             <p class="flex justify-center"> © centre ecommerce Auchan 2026 </p>
         </div>
     </footer>
-    <script type="module" src="JC/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>

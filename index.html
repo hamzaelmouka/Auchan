@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
 </head>
+
 <body class="">
     <header class=" border-b sticky left-0 top-0 bg-amber-50 ">
         <nav class="flex items-center justify-between">
             <div class="flex items-center font-bold ">
-            <span class="bg-rose-600 p-4 mr-4 rounded-2xl text-amber-50 ">A</span><h1 class=" text-rose-500">AUCHAN</h1>
+                <span class="bg-rose-600 p-4 mr-4 rounded-2xl text-amber-50 ">A</span>
+                <h1 class=" text-rose-500">AUCHAN</h1>
             </div>
             <div>
                 <ul class="flex items-center">
@@ -21,45 +24,43 @@
             </div>
         </nav>
     </header>
-      
+
     <main class="">
         <section class="bg-rose-600 px-2 py-7 text-red-200 leading-8 grid md:grid-cols-2 mb-4">
             <div class="mb-5">
-               <p> Nouvelle boutique en ligne</p>
-               <p class=" font-black text-amber-50 text-3xl">Tout Auchan,</p>
-               <p class=" font-black text-amber-50 text-3xl"> à portée de clic.</p> 
-               <p>Recherchez, filtrez, choisissez votre taille et glissez vos articles directement dans le panier.</p>
+                <p> Nouvelle boutique en ligne</p>
+                <p class=" font-black text-amber-50 text-3xl">Tout Auchan,</p>
+                <p class=" font-black text-amber-50 text-3xl"> à portée de clic.</p>
+                <p>Recherchez, filtrez, choisissez votre taille et glissez vos articles directement dans le panier.</p>
             </div>
             <div class="border flex flex-col items-center mb-4">
                 <img src="/icon/Icon (5).svg" class="  h-20 w-auto " alt="">
-               <p class="font-bold text-amber-50"> Déposez un produit ici</p>
+                <p class="font-bold text-amber-50"> Déposez un produit ici</p>
                 <p>pour l'ajouter au panier</p>
             </div>
         </section>
         <section>
             <div class="grid md:grid-cols-2 lg:grid-cols-4">
                 <div class=" p-4">
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="Rocherch un prouduit ...">
+                    <input id="filtre" class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="Rocherch un prouduit ...">
                 </div>
                 <div class="p-4">
                     <select name="" id="" class=" border w-full h-10 border-amber-950 rounded-md">
-                        <option value="">Tout les catalouge </option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option id="catigorie" value="">Tout les catalouge </option>
                     </select>
                 </div>
-                <div class ="p-4">
+                <div class="p-4">
                     <select name="" id="" class=" border w-full h-10 border-amber-950 rounded-md">
                         <option value="">Tri par defout </option>
                         <option value=""></option>
                         <option value=""></option>
                     </select>
                 </div>
-                <div class ="p-4">
-                    <select name="" id="" class=" border w-full h-10 border-amber-950 rounded-md">
-                        <option value="">page </option>
-                        <option value=""></option>
-                        <option value=""></option>
+                <div class="p-4">
+                    <select name="" id="parPage" class=" border w-full h-10 border-amber-950 rounded-md">
+                        <option value="4">4</option>
+                        <option value="8" selected>8</option>
+                        <option value="12">12</option>
                     </select>
                 </div>
             </div>
@@ -82,17 +83,20 @@
                                 Ajouter
                             </span>
                             </button>
-                        </div>
+                        </div>wa
                     </div>
                 </div>
             </div> -->
         </section>
+        <!-- <button id="next" class="border px-4 rounded m-4">suivant</button> -->
+        <div id="pagination" class="flex justify-center gap-2 p-4"></div>
     </main>
-    <footer class=" border-t">
-        <div class=" p-5">
-            <p class="flex justify-center"> © centre ecommerce Auchan 2026 </p>
+    <footer class=" border-t ">
+        <div class=" p-5 ">
+            <p class="flex justify-center "> © centre ecommerce Auchan 2026 </p>
         </div>
     </footer>
-    <script type="module" src="/JC/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
+
 </html>
