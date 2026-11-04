@@ -1,6 +1,9 @@
 // import exportDat from "./storage.js";
+export const paniree=[];
+let cont="cont";
 
-// exportDat()
+
+
 export function filterProduit(catalog, search) {
     return catalog.filter((element) =>
         element.nome.toLowerCase().includes(search.toLowerCase().trim())
@@ -17,6 +20,7 @@ export function produits(catalog) {
     catalog.forEach(element => {
         const article = document.createElement("article");
         article.className = "p-4 ";
+        article.id=element.id;
         article.innerHTML = `
         <div>
             <img class=" h-56 rounded-t-3xl w-full" src="${element.lienimg}"alt="">
@@ -27,7 +31,7 @@ export function produits(catalog) {
                 <div class=" flex justify-between">
                     <span>taile unique </span> 
                     <div >
-                        <button class="flex justify-center items-center bg-red-700 font-bold p-1 rounded-md ">
+                        <button id="btn-id" class="flex justify-center items-center bg-red-700 font-bold p-1 rounded-md ">
                             <span>
                                 <img class="" src="./icon/Icon (5).svg" alt=""> 
                             </span>
@@ -40,11 +44,25 @@ export function produits(catalog) {
             </div> 
         </div>`
         produit.appendChild(article);
+        article.addEventListener('click',(e)=>{
+            const arid=e.currentTarget.id;
+            const btn_id=e.target.closest("#btn-id");
+            if(btn_id){
+                if(element[cont]){
+                    element[cont]++;
+                }else{
+                    element[cont]=1
+                    paniree.push(element);
+                }
+            }
+        })
     });
 }
 
 export const paginate = (catalog, page, perPage) =>
     catalog.slice((page - 1) * perPage, page * perPage);
 
+
 export const getTotalPages = (catalog, perPage) =>
     Math.ceil(catalog.length / perPage);
+
