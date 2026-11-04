@@ -20,6 +20,14 @@
                     <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="index.html">Botique </a></li>
                     <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="Admin.html" class=" ">Admin </a></li>
                     <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="Contacte.html" class=" ">Contacte</a></li>
+                    <button id="panie" class="flex justify-center items-center bg-red-700 font-bold p-2 rounded-md ">
+                            <span>
+                                <img class="" src="/icon/Icon (5).svg" alt=""> 
+                            </span>
+                            <span  class="text-stone-50" >
+                                My prouduit
+                            </span>
+                    </button>
                 </ul>
             </div>
         </nav>
@@ -58,8 +66,8 @@
                 </div>
                 <div class="p-4">
                     <select name="" id="parPage" class=" border w-full h-10 border-amber-950 rounded-md">
-                        <option value="4">4</option>
-                        <option value="8" selected>8</option>
+                        <option value="12">4</option>
+                        <option value="12" selected>8</option>
                         <option value="12">12</option>
                     </select>
                 </div>
@@ -83,13 +91,41 @@
                                 Ajouter
                             </span>
                             </button>
-                        </div>wa
+                        </div>
                     </div>
                 </div>
             </div> -->
         </section>
         <!-- <button id="next" class="border px-4 rounded m-4">suivant</button> -->
         <div id="pagination" class="flex justify-center gap-2 p-4"></div>
+        <section id="modal" class="hidden">
+            <div id="moda" class="flex justify-end w-full fixed inset-0 items-center justify-center bg-[#530669]/15 backdrop-blur-[14px] backdrop-saturate-[118%] border border-[#530669]/0 rounded-[0px] shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]"> 
+                <div id="sala" class="bg-emerald-100 w-[85vh] h-[100vh] ">
+                    <header class="border-b  h-20 flex items-center justify-between">
+                        <h6 class="p-4 font-black text-2xl italic ">Mon panier</h6>
+                        <butten id="annule" class=" bg-amber-400 rounded-3xl font-bold text-2xl italic p-3 m-4 ">x</butten>
+                    </header>
+                    <section id="panii" class=" w-full h-full">
+                            <!-- <div class="grid grid-cols-4 bg-blue-500 py-4 p-3 rounded-md border  m-2">
+                               <img class="w-auto h-20 rounded-md  " src="/icon/alimentation/cafi.jpg" alt="">
+                                
+                                <div class="col-span-2">
+                                   <div class="text-lg pb-6 font-semibold">Veste en jean</div>
+                                    <div class="pl-8 flex gap-3">
+                                        <span class="bg-amber-500 border  flex rounded-md  text-2xl w-8 h-auto items-center justify-center">-</span>
+                                        <span id="cont" class="rounded-md border flex text-2xl  w-8 h-auto items-center justify-center">1</span>
+                                        <span class="rounded-md border flex text-2xl w-8 h-auto items-center justify-center">+</span>
+                                    </div> 
+                                </div>  
+                                <div class="">
+                                    <div class="pb-8 text-lg font-semibold">39,00 ฿€$</div>
+                                    <div class="text-rose-500 italic font-medium">Supprimer</div>
+                                </div>                             
+                            </div> -->
+                    </section>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class=" border-t ">
         <div class=" p-5 ">
