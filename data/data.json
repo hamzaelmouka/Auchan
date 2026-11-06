@@ -5,7 +5,7 @@
     "categorie": "Vêtements",
     "prix": 9.99,
     "quantity": "20",
-    "lienimg": "/icon/vetements/t-chort-bio.jpg"
+    "lienimg": "icon/vetements/t-chort-bio.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "categorie": "Vêtements",
     "prix": 29.90,
     "quantity": "21",
-    "lienimg": "/icon/vetements/jean.jpg"
+    "lienimg": "icon/vetements/jean.jpg"
   },
   {
     "id":3,
@@ -21,7 +21,7 @@
     "categorie": "Vêtements",
     "prix": 24.50,
     "quantity": "22",
-    "lienimg": "/icon/vetements/sweat_a_Capuche.jpg"
+    "lienimg": "icon/vetements/sweat_a_Capuche.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "categorie": "Vêtements",
     "prix": 39.00,
     "quantity": "23",
-    "lienimg": "/icon/vetements/veste_en_jean.jpg"
+    "lienimg": "icon/vetements/veste_en_jean.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "categorie": "Vêtements",
     "prix": 22.00,
     "quantity": "24",
-    "lienimg": "/icon/vetements/robe-ete.jpg"
+    "lienimg": "icon/vetements/robe-ete.jpg"
   },
   {
     "id": 6,
@@ -53,7 +53,7 @@
     "categorie": "Chaussures",
     "prix": 59.00,
     "quantity": "26",
-    "lienimg": "/icon/chaussures/botties.jpg"
+    "lienimg": "icon/chaussures/botties.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "categorie": "Électronique",
     "prix": 79.00,
     "quantity": "27",
-    "lienimg": "/icon/Electronique/casque.jpg"
+    "lienimg": "icon/Electronique/casque.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "categorie": "Électronique",
     "prix": 299.00,
     "quantity": "28",
-    "lienimg": "/icon/Electronique/smartphone.jpg"
+    "lienimg": "icon/Electronique/smartphone.jpg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "categorie": "Électronique",
     "prix": 129.00,
     "quantity": "29",
-    "lienimg": "/icon/Electronique/montre-houre.jpg"
+    "lienimg": "icon/Electronique/montre-houre.jpg"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "categorie": "Électronique",
     "prix": 45.00,
     "quantity": "30",
-    "lienimg": "/icon/Electronique/ensiente-paf.jpg"
+    "lienimg": "icon/Electronique/ensiente-paf.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "categorie": "Électronique",
     "prix": 649.00,
     "quantity": "31",
-    "lienimg": "/icon/Electronique/ordinatoure.jpg"
+    "lienimg": "icon/Electronique/ordinatoure.jpg"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "categorie": "Maison",
     "prix": 300.00,
     "quantity": "32",
-    "lienimg": "/icon/mison/cafi.jpg"
+    "lienimg": "icon/mison/cafi.jpg"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "categorie": "Maison",
     "prix": 119.90,
     "quantity": "33",
-    "lienimg": "/icon/mison/lampe.jpg"
+    "lienimg": "icon/mison/lampe.jpg"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "categorie": "Maison",
     "prix": 112.50,
     "quantity": "34",
-    "lienimg": "/icon/mison/mesnad.jpg"
+    "lienimg": "icon/mison/mesnad.jpg"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "categorie": "Alimentation",
     "prix": 8.49,
     "quantity": "35",
-    "lienimg": "/icon/alimentation/huile.jpg"
+    "lienimg": "icon/alimentation/huile.jpg"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "categorie": "Alimentation",
     "prix": 14.90,
     "quantity": "36",
-    "lienimg": "/icon/alimentation/cafi.jpg"
+    "lienimg": "icon/alimentation/cafi.jpg"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "categorie": "Alimentation",
     "prix": 2.99,
     "quantity": "37",
-    "lienimg": "/icon/alimentation/chokolata.jpg"
+    "lienimg": "icon/alimentation/chokolata.jpg"
   },
   
   {
