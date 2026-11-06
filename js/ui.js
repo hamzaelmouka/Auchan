@@ -1,4 +1,4 @@
-
+export let totalePrix=0;
 export function pagene(totale,current,onpage){
     const pagination=document.getElementById("pagination");
     if(!pagination) return;
@@ -18,6 +18,7 @@ export function pagene(totale,current,onpage){
 export function panier(paniree,pani){
     pani.innerHTML="";
 paniree.forEach((element)=>{
+    totalePrix+=element.prix*element.cont;
     pani.innerHTML+=`
     <div class="grid grid-cols-4 bg-blue-500 py-4 p-3 rounded-md border  m-2">
         <img class="w-auto h-20 rounded-md  " src="${element.lienimg}" alt="">
@@ -30,7 +31,7 @@ paniree.forEach((element)=>{
         </div> 
         </div>  
         <div class="">
-        <div class="pb-8 text-lg font-semibold">${element.prix} ฿€$</div>
+        <div class="pb-8 text-lg font-semibold">${element.prix*element.cont} ฿€$</div>
         <div id="sup" data-id="${element.id}"class="text-rose-500 italic font-medium">Supprimer</div>
         </div>                             
     </div>
