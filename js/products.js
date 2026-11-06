@@ -1,5 +1,6 @@
+import { getPanier, savePanier } from "./storage.js";
 // import exportDat from "./storage.js";
-export const paniree=[];
+export const paniree=getPanier();
 let cont="cont";
 
 
@@ -12,7 +13,6 @@ export function filterProduit(catalog, search) {
 }
 
 
-
 const produit = document.getElementById("prouduit")
 export function produits(catalog) {
     if (!produit) return;
@@ -22,7 +22,7 @@ export function produits(catalog) {
         article.className = "p-4 ";
         article.id=element.id;
         article.innerHTML = `
-        <div>
+        <div draggable="true">
             <img class=" h-56 rounded-t-3xl w-full" src="${element.lienimg}"alt="">
             <div class="p-6 leading-8 bg-amber-200 rounded-b-md ">
                 <p class="text-red-700 font-semibold">${element.categorie}</p>
@@ -45,15 +45,16 @@ export function produits(catalog) {
         </div>`
         produit.appendChild(article);
         article.addEventListener('click',(e)=>{
-            const arid=e.currentTarget.id;
+            // const arid=e.currentTarget.id;
             const btn_id=e.target.closest("#btn-id");
             if(btn_id){
-                if(element[cont]){
-                    element[cont]++;
+                const elem=paniree.find((p)=>p.id===element.id)
+                if(elem){
+                    elem.cont++;
                 }else{
-                    element[cont]=1
-                    paniree.push(element);
+                    paniree.push({...element,cont:1});
                 }
+                savePanier(paniree)
             }
         })
     });
