@@ -57,23 +57,27 @@
                 <div class="md:col-span-2">Ajouter un produit</div>
                 <div class=" p-4">
                     <label for="">nom*</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="nom" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <p id="erreurNom" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class=" p-4">
                     <label for="">categore*</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="catego" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <p id="erreurcatego" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class=" p-4">
                     <label for="">prix*</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="pri" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <p id="erreurprix" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class=" p-4">
                     <label for="">Stock *</label>
-                    <input class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="stock" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <p id="erreurstock" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class="p-4 md:col-span-2">
                     <label for="">Path de img*</label>
-                    <input type="text" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="img" type="text" class="border w-full h-10 border-amber-950 rounded-md" type="text">
                 </div>
             </div>
             <div class="">
@@ -88,7 +92,7 @@
                 </div>
                 <div class="flex gap-4">
                     <div>
-                        <button class="flex justify-center items-center bg-red-700 font-bold p-1 rounded-md ">
+                        <button id="ajoute" class="flex justify-center items-center bg-red-700 font-bold p-1 rounded-md disabled">
                             <span class="text-stone-50" >
                                Ajouter
                             </span>
@@ -133,7 +137,7 @@
             <p class="flex justify-center"> © centre ecommerce Auchan 2026 </p>
         </div>
     </footer>
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/admin.js"></script>
 </body>
 
 </html>
