@@ -10,7 +10,10 @@ export function catalogadmine(datas) {
                 <div>${element.nome}</div>
                 <div>${element.prix}</div>
                 <div>${element.categorie}</div>
-                <div>${element.quantity}</div>
+                <div>${element.quantity}
+                <span class=" hover:text-amber-400 mr-4 text-lime-700"><button  data-action="modifier" data-id="${element.id}" >Modifier</button>
+                </span><span  class="hover:text-amber-400 text-rose-700"><button data-action="supprimer" data-id="${element.id}">Supprimer</button>
+                </div>
                 </div>
     `
         cataloga.appendChild(article);
