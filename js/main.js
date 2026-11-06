@@ -1,8 +1,8 @@
 import { produits, filterProduit, paginate ,getTotalPages ,paniree } from "./products.js";
-import { pagene , panier} from "./ui.js";
-import { catalogadmine } from "./cart.js";
+import { pagene , panier , totalePrix } from "./ui.js";
+// import { catalogadmine } from "./cart.js";
 import exportDat from "./api.js";
-import { saveData, getData, } from "./storage.js";
+import { saveData, getData,savePanier } from "./storage.js";
 
 const modale=document.getElementById("modal");
 const paniee=document.getElementById("panie");
@@ -12,15 +12,15 @@ const pani=document.getElementById("panii");
 
 const filter = document.getElementById("filtre");
 const pageSelect=document.getElementById("parPage")
-
+const select=document.getElementById("select");
 function ouvrerMobal(){
     panier(paniree,pani);
+    document.body.classList.add("overflow-hidden")
     modale.classList.remove("hidden");
-    modale.classList.add("flex");
 }
 function fermeModal(){
-    modale.classList.remove("flex");
     modale.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden")
     panier(paniree,pani);
 }
 
@@ -40,7 +40,9 @@ pani.addEventListener('click',(e)=>{
     if(ev==="moin") element.cont--;
     if(ev==="plus") element.cont++;
     if(element.cont<=0 || ev==="sup") paniree.splice(paniree.indexOf(element),1);
-    panier(paniree,pani)
+    savePanier(paniree);
+    panier(paniree,pani);
+
 })
 // const panierr=[]
 // function proudui(dat){
@@ -55,16 +57,36 @@ pani.addEventListener('click',(e)=>{
 
 // }
 
+function selecte(data){
+    if(!select)return;
+    select.innerHTML="";
+    select.innerHTML=`<option id="" value="">Tout les catalouge </option>`
+    data.forEach(function(element){
+        let valid=true;
+        Array.from(select.options).forEach(function(e){
+            if(element.categorie===e.value){
+                valid=false
+            }
+        })
+        if(valid){
+            select.innerHTML+=`<option id="" value="${element.categorie}">${element.categorie}</option>`
+        
+        }
 
+    })
+}
+select.addEventListener("change", () => {
+    currentPage = 1;
+    update();
+});
 
-
-
-let currentPage=1;
-
-const init = (datas) => {
-    const update=()=>{
+function update(){
         const parPage= Number(pageSelect.value);
-        const result=filterProduit(datas,filter.value);
+        let result=filterProduit(datas,filter.value);
+        if(select.value!==""){
+            result=result.filter((p)=>p.categorie===select.value);
+        }
+
 
         produits(paginate(result,currentPage,parPage));
         pagene(getTotalPages(result,parPage),currentPage,(page)=>{
@@ -72,8 +94,12 @@ const init = (datas) => {
             update();
 
         });
-        catalogadmine(result);
     };
+
+
+let currentPage=1;
+
+function  init(datas){
     if (filter) {
         filter.addEventListener("input", () => {
             currentPage=1;
@@ -87,6 +113,7 @@ const init = (datas) => {
             update();
         })
     }
+    selecte(datas)
     update();
 }
 
@@ -100,6 +127,7 @@ if (datas) {
     exportDat().then((data) => {
         saveData(data);
         init(data);
+
         // proudui(data);
     })
 }
