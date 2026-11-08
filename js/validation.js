@@ -1,6 +1,5 @@
 const regexNom = /^[A-Za-zÀ-ÿ '\-]{3,30}$/;
 const regexPrix=/^[0-9.]+$/;
-a
 
 export function Numbervalide(x,a) {
     if (regexPrix.test(a.value.trim()) && Number(a.value) > 0) {
