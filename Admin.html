@@ -8,82 +8,84 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 
-<body class="">
-    <header class=" border-b sticky left-0 top-0 bg-amber-50 ">
-        <nav class="flex items-center justify-between">
-            <div class="flex items-center font-bold ">
-                <span class="bg-rose-600 p-4 mr-4 rounded-2xl text-amber-50 ">A</span>
+<body class="bg-[#e3ba9e]">
+    
+    <header class=" text-sm border-b sticky z-50 left-0 top-0 bg-[oklch(0.8_0.03_16.45)] py-3 ">
+         <nav class="flex flex-wrap gap-2 p-2 md:px-12">
+            <div class="flex  items-center font-bold justify-between flex-1">
+             <div class="flex items-center font-bold ">
+                <span class="bg-rose-600 p-2  rounded-2xl text-amber-50 ">A</span>
                 <h1 class=" text-rose-500">AUCHAN</h1>
-            </div>
-            <div>
-                <ul class="flex items-center">
-                    <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="index.html">Botique </a></li>
-                    <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="Admin.html" class=" ">Admin </a></li>
-                    <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="Contacte.html" class=" ">Contacte</a></li>
-                </ul>
+             </div>
+             
+             <ul class="flex  gap-1 items-end">
+                <li class=" bg-fuchsia-200 rounded-md p-1"><a href="index.html">Botique </a></li>
+                <li class=" bg-rose-600 rounded-md p-1"><a href="Admin.html" class=" ">Admin </a></li>
+                <li class=" bg-fuchsia-200 rounded-md p-1"><a href="Contacte.html" class=" ">Contacte</a></li>
+             </ul>
             </div>
         </nav>
-    </header>
+    </header>   
     <main class=" md:p-10 ">
         <section>
-            <div class="p-8">
+            <div class="p-8 text-2xl italic text-amber-900">
                 <p>Tableau de bord</p>
             </div>
         </section>
         <section class="grid md:grid-cols-2">
             <div class="m-3 flex gap-7 ">
-                <div class=" rounded-md p-2 flex flex-col w-[50%] h-auto border-rose-600 border-2 ">
+                <div class="bg-amber-50 rounded-md p-2 flex flex-col w-[50%] h-auto border-amber-600 border-2 ">
                     <p>prouduis</p>
-                    <p class="text-2xl">0</p>
+                    <p id="nbp" class="text-2xl">0</p>
                 </div>
-                <div class=" rounded-md p-2 flex flex-col w-[50%] h-auto border-rose-600 border-2 ">
+                <div class="bg-amber-50 rounded-md p-2 flex flex-col w-[50%] h-auto border-amber-600 border-2 ">
                     <p>categorie</p>
-                    <p class="text-2xl">0</p>
+                    <p id="nbc" class="text-2xl">0</p>
                 </div>
             </div>
             <div class="m-3 flex gap-7 ">
-                <div class=" rounded-md p-2 flex flex-col w-[50%] h-auto border-rose-600 border-2 ">
+                <div class="bg-amber-50 rounded-md p-2 flex flex-col w-[50%] h-auto border-amber-600 border-2 ">
                     <p>prix moyen</p>
-                    <p class="text-2xl">0</p>
+                    <p id="nbpm" class="text-2xl">0</p>
                 </div>
-                <div class=" rounded-md p-2 flex flex-col w-[50%] h-auto border-rose-600 border-2 ">
+                <div class="bg-amber-50 rounded-md p-2 flex flex-col w-[50%] h-auto border-amber-600 border-2 ">
                     <p>Valeur du stock</p>
-                    <p class="text-2xl">0</p>
+                    <p id="nbvs" class="text-2xl">0</p>
                 </div>
             </div>
         </section>
         <section class="p-2 ">
             <div class="grid md:grid-cols-2">
-                <div class="md:col-span-2">Ajouter un produit</div>
+                <div class="md:col-span-2 text-2xl italic text-amber-900">Ajouter un produit</div>
                 <div class=" p-4">
                     <label for="">nom*</label>
-                    <input id="nom" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="nom" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md" type="text">
                     <p id="erreurNom" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class=" p-4">
                     <label for="">categore*</label>
-                    <input id="catego" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="catego" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md" type="text">
                     <p id="erreurcatego" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class=" p-4">
                     <label for="">prix*</label>
-                    <input id="pri" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="pri" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md" type="text">
                     <p id="erreurprix" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class=" p-4">
                     <label for="">Stock *</label>
-                    <input id="stock" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="stock" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md" type="text">
                     <p id="erreurstock" class="text-red-600 text-sm"></p> 
                 </div>
                 <div class="p-4 md:col-span-2">
                     <label for="">Path de img*</label>
-                    <input id="img" type="text" class="border w-full h-10 border-amber-950 rounded-md" type="text">
+                    <input id="img" type="text" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md" type="text">
                 </div>
             </div>
-            <div class="">
-                <div>
+            <div class=" gap-3  m-2">
+                <div class=" mb-6 mr-5">
                     <label for="">Tailles (M +5%, L +10%, XL +20%)</label>
-                    <select name="" id="" class=" border border-amber-950 rounded-md">
+                    <select name="" id="" class="ml-4 bg-amber-50 border border-amber-950 rounded-md">
                         <option value="">select le Tailles </option>
                         <option value="">M</option>
                         <option value="">L</option>
@@ -100,7 +102,7 @@
                     </div>
                     <div>
                         <button class=" border flex justify-center items-center  font-bold p-1 rounded-md ">
-                            <span class="" >
+                            <span class="bg-amber-50" >
                                annuler
                             </span>
                         </button>
@@ -113,26 +115,16 @@
             <div>
                 <div class="flex gap-2 items-center justify-between">
                     <h4>catalouge</h4>
-                    <input id="filtre" type="text" class="border w-80 h-10 border-amber-950 rounded-md" placeholder="Filtre..">
+                    <input id="filtre" type="text" class="bg-amber-50ss border w-80 h-10 border-amber-950 rounded-md" placeholder="Filtre..">
                 </div>
             </div>
-            <div id="" class="overflow-x-auto">
-                <div class="min-w-150">
-                    <div class="grid grid-cols-5 pt-6 text-xl font-bold">
-                        <p>image</p>
-                        <p>nom</p>
-                        <p>prix</p>
-                        <p>catalog</p>
-                        <p>stoke</p>
-                    </div>
-                    <div id="cataloga" class=" ">
-
-                    </div>
-                </div>
+            <div id="" class="overflow-x-auto  rounded-xl border border-gray-200 ">
+                <table id="cataloga" class=" w-full  border-collapse  text-sm text-left">
+                </table>
             </div>
         </section>
     </main>
-    <footer class=" border-t">
+    <footer class=" border-t bg-[oklch(0.8_0.03_16.45)] py-3 text-2xl italic text-red-900">
         <div class=" p-5">
             <p class="flex justify-center"> © centre ecommerce Auchan 2026 </p>
         </div>

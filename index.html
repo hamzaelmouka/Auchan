@@ -8,40 +8,41 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 
-<body class="">
-    <header class=" border-b sticky left-0 top-0 bg-amber-50 ">
-        <nav class="flex items-center justify-between">
-            <div class="flex items-center font-bold ">
-                <span class="bg-rose-600 p-4 mr-4 rounded-2xl text-amber-50 ">A</span>
+<body class=" bg-[#e3ba9e]">
+    <header class="py-3 text-sm border-b sticky z-50 left-0 top-0 bg-[oklch(0.8_0.03_16.45)]">
+         <nav class="flex flex-wrap gap-2 p-2 md:px-4">
+            <div class="flex  items-center font-bold justify-between flex-1">
+             <div class="flex items-center font-bold ">
+                <span class="bg-rose-600 p-2  rounded-2xl text-amber-50 ">A</span>
                 <h1 class=" text-rose-500">AUCHAN</h1>
+             </div>
+             
+             <ul class="flex  gap-1 items-end">
+                <li class=" bg-rose-600 rounded-md p-1"><a href="index.html">Botique </a></li>
+                <li class=" bg-fuchsia-200 rounded-md p-1"><a href="Admin.html" class=" ">Admin </a></li>
+                <li class=" bg-fuchsia-200 rounded-md p-1"><a href="Contacte.html" class=" ">Contacte</a></li>
+             </ul>
             </div>
-            <div>
-                <ul class="flex items-center">
-                    <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="index.html">Botique </a></li>
-                    <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="Admin.html" class=" ">Admin </a></li>
-                    <li class=" bg-fuchsia-200 rounded-md p-2 mr-5"><a href="Contacte.html" class=" ">Contacte</a></li>
-                    <button id="panie" class="flex justify-center items-center bg-red-700 font-bold p-2 rounded-md ">
-                            <span>
-                                <img class="" src="./icon/Icon (5).svg" alt=""> 
-                            </span>
-                            <span  class="text-stone-50" >
-                                My prouduit
-                            </span>
-                    </button>
-                </ul>
-            </div>
+             <button id="panie" class=" relative flex  justify-end items-end md:w-auto bg-red-700 font-bold p-2 rounded-md ">
+                <span id="comptour" class=" absolute -top-2 left-0 bg-emerald-800 h-6 w-6 rounded-full flex justify-center items-center text-white text-xs ">
+                    0
+                </span>
+                <span><img class="" src="./icon/Icon (5).svg" alt=""> </span>
+                <span  class="text-stone-50" >My prouduit</span>
+             </button>
+            
         </nav>
     </header>     
 
-    <main class="">
-        <section class="bg-rose-600 px-2 py-7 text-red-200 leading-8 grid md:grid-cols-2 mb-4">
+    <main class="md:px-4 ">
+        <section class=" bg-[#A3170A] px-2 py-7 text-red-200 leading-8 grid  rounded-b-xl md:grid-cols-2 mb-4">
             <div class="mb-5">
                 <p> Nouvelle boutique en ligne</p>
                 <p class=" font-black text-amber-50 text-3xl">Tout Auchan,</p>
                 <p class=" font-black text-amber-50 text-3xl"> à portée de clic.</p>
                 <p>Recherchez, filtrez, choisissez votre taille et glissez vos articles directement dans le panier.</p>
             </div>
-            <div class="border flex flex-col items-center mb-4">
+            <div id="zone" class="border-2 border-dashed rounded-2xl flex flex-col items-center mb-4 transition duration-300">
                 <img src="./icon/pani.png" class="  h-20 w-auto " alt="">
                 <p class="font-bold text-amber-50"> Déposez un produit ici</p>
                 <p>pour l'ajouter au panier</p>
@@ -50,29 +51,34 @@
         <section>
             <div class="grid md:grid-cols-2 lg:grid-cols-4">
                 <div class=" p-4">
-                    <input id="filtre" class="border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="Rocherch un prouduit ...">
+                    <input id="filtre" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md" type="text" placeholder="Rocherch un prouduit ...">
                 </div>
                 <div class="p-4">
-                    <select name="" id="select" class=" border w-full h-10 border-amber-950 rounded-md">
+                    <select name="" id="select" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md">
                         
                     </select>
                 </div>
                 <div class="p-4">
-                    <select name="" id="" class=" border w-full h-10 border-amber-950 rounded-md">
+                    <select name="" id="" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md">
                         <option value="">Tri par defout </option>
                         <option value=""></option>
                         <option value=""></option>
                     </select>
                 </div>
                 <div class="p-4">
-                    <select name="" id="parPage" class=" border w-full h-10 border-amber-950 rounded-md">
-                        <option value="12">4</option>
-                        <option value="12" selected>8</option>
-                        <option value="12">12</option>
+                    <select name="" id="parPage" class="bg-amber-50 border w-full h-10 border-amber-950 rounded-md">
+                        <option value="8">8</option>
+                        <option value="12" selected>12</option>
+                        <option value="16">16</option>
                     </select>
                 </div>
             </div>
         </section>
+         <div class="px-8 flex items-center justify-between">
+            <span><button id="liste" class="bg-amber-50 border  rounded-2xl p-2">☰ Liste</button></span>
+            <span><button id="carte" class="bg-amber-50 border  bg-red-400 rounded-2xl p-2">▦ les carte </button></span> 
+        
+        </div>
         <section id="prouduit" class=" grid md:grid-cols-2 lg:grid-cols-4">
             <!-- <div class="p-4 ">
                 <img class=" rounded-t-3xl h- w-full" src="/icon/produit-1.svg" alt="">
@@ -98,11 +104,15 @@
         </section>
         <!-- <button id="next" class="border px-4 rounded m-4">suivant</button> -->
         <div id="pagination" class="flex justify-center gap-2 p-4"></div>
-        <section id="modal" class="hidden">
-            <div id="moda" class="flex justify-end w-full fixed inset-0 items-center justify-center bg-[#530669]/15 backdrop-blur-[14px] backdrop-saturate-[118%] border border-[#530669]/0 rounded-[0px] shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]"> 
-                <div id="sala" class="bg-emerald-100 w-[85vh] h-full ">
-                    <header class="border-b  h-20 flex items-center justify-between">
-                        <h6 class="p-4 font-black text-2xl italic ">Mon panier</h6>
+        <section id="modal" class="hidden ">
+            <div id="moda" class=" z-60 flex justify-end w-full fixed inset-0 items-center  bg-[#530669]/15 backdrop-blur-[14px] backdrop-saturate-[118%] border border-[#530669]/0 rounded-[0px] shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]"> 
+                <div id="sala" class="bg-[#e3ba9e] w-[85vh] h-full ">
+                    <header class="border-b bg-[oklch(0.8_0.03_16.45)] h-20 flex items-center justify-between">
+                        <div>
+                            <span class="p-4 font-black text-2xl italic ">Mon panier</span>
+                            <span class="italic text-xl font-semibold h-2 w-4 bg-fuchsia-200 rounded-md p-2"> Total TTC : <span id="tot"> 0.00</span> DH</span>
+                        </div>
+
                         <butten id="annule" class=" bg-amber-400 rounded-3xl font-bold text-2xl italic p-3 m-4 ">x</butten>
                     </header>
                     <section id="panii" class=" overflow-scroll w-full h-[91%]">
@@ -127,7 +137,7 @@
             </div>
         </section>
     </main>
-    <footer class=" border-t ">
+    <footer class=" border-t bg-[oklch(0.8_0.03_16.45)] py-3 text-2xl italic text-red-900">
         <div class=" p-5 ">
             <p class="flex justify-center "> © centre ecommerce Auchan 2026 </p>
         </div>
