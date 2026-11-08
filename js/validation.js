@@ -1,5 +1,8 @@
+const regexNom = /^[A-Za-zÀ-ÿ '\-]{3,30}$/;
+const regexPrix=/^[0-9.]+$/;
 
-export function prixvalide(x,a) {
+
+export function Numbervalide(x,a) {
     if (regexPrix.test(a.value.trim()) && Number(a.value) > 0) {
         x.textContent = "";
         return true;
@@ -9,7 +12,7 @@ export function prixvalide(x,a) {
     }
 }
 
-function nomvalide(x,a) {
+export function nomvalide(x,a) {
     if (regexNom.test(a.value.trim())) {
         x.textContent = "";
         return true;
