@@ -1,7 +1,9 @@
 import { catalogadmine } from "./cart.js";
+import { statique } from "./ui.js";
 import { filterProduit } from "./products.js";
-import exportDat from "./api.js";
+import {exportDat } from "./api.js";
 import { saveData ,getData } from "./storage.js";
+import { Numbervalide,nomvalide } from "./validation.js";
 const nom=document.getElementById("nom");
 const prix=document.getElementById("pri");
 const catego=document.getElementById("catego");
@@ -19,27 +21,19 @@ const liste=document.getElementById("cataloga");
 let valid=0;
 
 const datas=getData();
+ 
+filter.addEventListener("input",()=>{
+        catalogadmine(filterProduit(datas,filter.value));
+    })
 
 function init(datas){
     catalogadmine(datas);
-    filter.addEventListener("input",()=>{
-        catalogadmine(filterProduit(datas,filter.value));
-    })
+    statique(datas);
+    
 };
-const regexNom = /^[A-Za-zÀ-ÿ '\-]{3,30}$/;
-const regexPrix=/^\d+$/;
 
 
 
-function nomvalide(x,a) {
-    if (regexNom.test(a.value.trim())) {
-        x.textContent = "";
-        return true;
-    } else {
-        x.textContent = " entre un nom entre 3 et 30 caracter .";
-        return false;
-    }
-}
 nom.addEventListener("input",(e)=>{
     nomvalide(erreurNom,nom);
     valide();
@@ -50,25 +44,16 @@ catego.addEventListener("input",(e)=>{
 })
 
 
-function prixvalide(x,a) {
-    if (regexPrix.test(a.value.trim()) && Number(a.value) > 0) {
-        x.textContent = "";
-        return true;
-    } else {
-        x.textContent = " entre en prix de resset positive .";
-        return false;
-    }
-}
 prix.addEventListener("input",(e)=>{
-    prixvalide(erreurprix,prix);
+    Numbervalide(erreurprix,prix);
     valide();
 })
 stock.addEventListener("input",(e)=>{
-    prixvalide(erreurstock,stock);
+    Numbervalide(erreurstock,stock);
     valide();
 });
 function valide(){
-    if(nomvalide(erreurNom,nom)&&nomvalide(erreurcatego,catego)&&prixvalide(erreurprix,prix)&&prixvalide(erreurstock,stock)){
+    if(nomvalide(erreurNom,nom)&&nomvalide(erreurcatego,catego)&&Numbervalide(erreurprix,prix)&&Numbervalide(erreurstock,stock)){
         ajoute.disabled=false;
         return true ;
     }else{
@@ -78,8 +63,8 @@ function valide(){
 }
 
 ajoute.addEventListener("click",()=>{
-    console.log(1)
-    if(valide&&valid){
+    if(!valide()) return;
+    if(valid){
     datas.forEach((element)=>{
         if(element.id===valid){
             element.nome=nom.value;
@@ -87,11 +72,16 @@ ajoute.addEventListener("click",()=>{
             element.prix=prix.value;
             element.quantity=stock.value;
             element.lienimg=img.value;
+            nom.value = "";
+            catego.value = "";
+            prix.value = "";
+            stock.value = "";
+            img.value="";
         }
         saveData(datas);
         init(datas)
     })
-    }else if(valide){
+    }else{
           let proudu={};
         proudu.id=Date.now();
         proudu.nome=nom.value;
@@ -99,8 +89,12 @@ ajoute.addEventListener("click",()=>{
         proudu.prix=prix.value;
         proudu.quantity=stock.value;
         proudu.lienimg=img.value;
-        datas.push(proudu)
-        console.log(datas);
+        datas.push(proudu);
+        nom.value = "";
+        catego.value = "";
+        prix.value = "";
+        stock.value = "";
+        img.value="";
         saveData(datas);
     }
 })
@@ -113,7 +107,6 @@ liste.addEventListener("click", function (e) {
                 if (confirm("Voulez-vous vraiment supprimer cette recette ?")) {
                     datas.splice(cont, 1);
                     saveData(datas)
-
                 }
             }
         }
@@ -137,6 +130,7 @@ if(datas){
     init(datas)
 }else{
     exportDat().then((data)=>{
+        datas=data;
         saveData(data);
         init(data);
     })
