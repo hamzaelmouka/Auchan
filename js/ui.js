@@ -51,7 +51,7 @@ export function statique(datas){
     const cate=[];
     datas.forEach((p)=>{
         nobmrep++;
-        totale+=p.prix
+        totale+=Number(p.prix);
         if(!cate.includes(p.categorie)){
             cate.push(p.categorie);
         }
