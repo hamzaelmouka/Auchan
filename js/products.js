@@ -1,7 +1,7 @@
 import { getPanier, savePanier } from "./storage.js";
+import { statiqu } from "./ui.js";
 // import exportDat from "./storage.js";
 export const paniree=getPanier();
-let cont="cont";
 
 
 
@@ -20,11 +20,10 @@ export function produits(catalog) {
     catalog.forEach(element => {
         const article = document.createElement("article");
         article.className = "p-4 ";
-        article.id=element.id;
         article.innerHTML = `
-        <div draggable="true">
-            <img class=" h-56 rounded-t-3xl w-full" src="${element.lienimg}"alt="">
-            <div class="p-6 leading-8 bg-amber-200 rounded-b-md ">
+        <div id="${element.id}" class="listt" draggable="true" >
+            <img class="image md:h-56 rounded-t-3xl w-full" src="${element.lienimg}"alt="">
+            <div class="ful w-full p-6 leading-8 bg-[oklch(0.8_0.03_16.45)] rounded-b-md ">
                 <p class="text-red-700 font-semibold">${element.categorie}</p>
                 <p class="italic">" ${element.nome} "</p>
                 <p class="text-2xl font-bold"><span class=" ">${element.prix}</span><span class="">DH</span></p>
@@ -48,13 +47,7 @@ export function produits(catalog) {
             // const arid=e.currentTarget.id;
             const btn_id=e.target.closest("#btn-id");
             if(btn_id){
-                const elem=paniree.find((p)=>p.id===element.id)
-                if(elem){
-                    elem.cont++;
-                }else{
-                    paniree.push({...element,cont:1});
-                }
-                savePanier(paniree)
+                ajouteouPabier(element)
             }
         })
     });
@@ -67,3 +60,15 @@ export const paginate = (catalog, page, perPage) =>
 export const getTotalPages = (catalog, perPage) =>
     Math.ceil(catalog.length / perPage);
 
+export function ajouteouPabier(elemnt){
+    const elem=paniree.find((p)=>p.id===elemnt.id)
+    if(elem){
+         elem.cont++;
+
+    }else{
+        paniree.push({...elemnt,cont:1});
+
+    }
+    savePanier(paniree);
+    statiqu(paniree);
+}
