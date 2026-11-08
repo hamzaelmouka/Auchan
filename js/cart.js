@@ -1,5 +1,4 @@
 
-
 export function catalogadmine(datas) {
     const cataloga = document.getElementById("cataloga");
     if (!cataloga) return;
